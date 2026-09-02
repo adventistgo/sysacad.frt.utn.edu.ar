@@ -1,0 +1,284 @@
+<html><head>
+  <title>
+    Certificado de alumno regular
+  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <style type="text/css"><!-- .titulo {color: #0000FF; font-family: "Comic Sans MS"}body {background-image:url("fondo.gif")}.tituloTabla {background-color: #0000FF; color: #FFFFFF; font-family: "Comic Sans MS"; text-align: center}.textoTabla {font-family: "Times new Roman"}.TextoProblema {color:red}.textoResaltado {font-weight:bold;color:darkred}.textoModificado {color:blue}.textoError {font-family: "Comic Sans MS";color:red}.textoAvisoMensajes {font-family: "Comic Sans MS";color:red;text-align: center}.textoSubtituloTabla {font-family: "Times new Roman";color:DarkRed; font-weight:bold}--></style>
+
+  <!-- Agrega la referencia a la biblioteca PDF.js -->
+  <script src="Js/build/pdf.js"></script>
+
+  <!-- Agrega el código JavaScript para cargar el PDF -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var url = 'https://drive.google.com/uc?export=download&id=1Y_zM6mK4zhOzhbMuoowyCgzAG2LYThXX';
+
+      // Carga el PDF utilizando PDF.js
+      pdfjsLib.getDocument(url).promise.then(function(pdf) {
+        var canvasContainer = document.getElementById('pdf-container');
+
+        // Itera sobre todas las páginas del PDF
+        var pagesPromises = [];
+        for (var pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+          pagesPromises.push(pdf.getPage(pageNumber));
+        }
+
+        // Procesa todas las promesas de las páginas del PDF
+        Promise.all(pagesPromises).then(function(pages) {
+          pages.forEach(function(page, index) {
+            var scale = 1.5;
+            var viewport = page.getViewport({ scale: scale });
+
+            // Crea un elemento <canvas> para cada página
+            var canvas = document.createElement('canvas');
+            canvasContainer.appendChild(canvas);
+
+            // Agrega una línea separadora antes de cada página, excepto la primera
+            if (index >= 0) {
+              var separator = document.createElement('hr');
+              canvasContainer.appendChild(separator);
+            }
+
+            // Prepara el <canvas> del PDF
+            var context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            // Renderiza la página en el <canvas>
+            page.render({
+              canvasContext: context,
+              viewport: viewport
+            });
+          });
+        }).catch(function(error) {
+          // En caso de error al cargar el PDF, muestra el mensaje de error
+          var errorMessage = document.getElementById('error-message');
+          errorMessage.style.display = 'block';
+        });
+      });
+    });
+  </script>
+</head>
+
+<body class="body" onload="setInterval('Blink()',500)">
+  <!--
+ Fragmento HTML utilizado para poner los títulos de todas las páginas.
+ Este archivo no se pisa nunca en las actualizaciones de SysacadWEB, 
+ de manera que puede modificarse libremente.
+-->
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="16%">&nbsp;</td>
+    <td width="68%"><h2 align="center" class="titulo">Universidad Tecnológica Nacional<br>
+  Facultad Regional Tucuman</h2>
+      <p align="center" class="titulo">Sistema Académico SYSACAD<br>
+  Módulo de autogestión alumnos </p></td>
+    <td width="16%"><h2 align="center" class="titulo">&nbsp;</h2></td>
+  </tr>
+</tbody></table>
+
+
+<table align="center" width="auto" cellpadding="8" cellspacing="0">
+  <tbody><tr>
+    <th class="tituloTabla">
+      
+        Certificado de alumno regular
+      
+    </th>
+  </tr>
+  <tr class="textoTabla">
+    <td align="center" height="auto">
+      <div id="pdf-container"><canvas height="1188" width="918"></canvas><hr></div>
+      <p id="error-message" style="display: none;">No se puede mostrar el archivo PDF en estos momentos. Puede descargarlo más abajo.</p>
+    </td>
+  </tr>
+  
+    <tr class="textoTabla">
+      <td id="link-descarga" align="center">
+      
+        <a href="https://drive.google.com/uc?export=download&id=1Y_zM6mK4zhOzhbMuoowyCgzAG2LYThXX">Descargar archivo</a>
+      
+      </td>
+    </tr>
+  
+</tbody></table>
+
+
+
+  <!--
+ Fragmento HTML utilizado para poner un texto al pié de todas las páginas.
+ Este archivo no se pisa nunca en las actualizaciones de SysacadWEB, 
+ de manera que puede modificarse libremente.
+-->
+
+<p>
+	</p><center>
+	<div align="center" style="
+	color : #000000; 
+	background-color : #FFF; 
+	font-style : normal; 
+	font-family : Arial, Verdana; 
+	font-size : 9pt; 
+	width : 450px;	
+	border: 1px solid red;">
+		<div style="font-weight : bold; background-color : #F95;border-bottom:1px solid red;">
+			IMPORTANTE
+		</div>
+		<div style="padding:10px;">
+			<p style="color:black; font-size:16px;font-weight:bold;">
+			<b>UNIVERSIDAD TECNOLOGICA NACIONAL</b>
+			</p>
+			<p style="color:black; font-size:12px;font-weight:bold;">
+			<b>FACULTAD REGIONAL TUCUMAN</b></p>
+			
+			
+			<p></p>
+			<p style="color:RED; font-size:22px;font-weight:bold;">
+			
+		
+ 
+			
+			<script>
+			function Blink()
+			{
+			var ElemsBlink = document.getElementsByTagName('blink');
+			for(var i=0;i<ElemsBlink.length;i++)
+			ElemsBlink[i].style.visibility = ElemsBlink[i].style.visibility
+			=='visible' ?'hidden':'visible';
+			}
+			!
+			</script>
+
+		
+ 		
+			
+			
+              
+			<blink>¡INSCRIPCION  TODAS LAS ESPECIALIDADES DE GRADO 2do CUATRIMESTRE a partir del Lunes 10 de AGOSTO desde las 12 hs  --!!</blink>
+
+	<!--					
+                        
+			</p>
+			
+			<p style="color:black; font-size:20px;font-weight:bold;">
+                       
+			<div align="center"><font color="#FFFFFF" size="+2"><marquee bgcolor="#000000" direction="left" loop="20">CRONOGRAMA DE INSCRIPCION 2024</marquee></font></div>
+
+                       
+			 </p>
+			 
+			 <p style="color:blUe; font-size:18px;font-weight:bold;">
+                        <b>PRIMER AÑO desde 9hs del MIERCOLES 26 hasta las 9hs del JUEVES 27 DE MARZO DE 2025</b>
+			</p>
+			 
+			<p style="color:green; font-size:18px;font-weight:bold;">	
+                        <b>SEGUNDO AÑO  desde 9hs del JUEVES 27 hasta las 9hs del VIERNES 28 DE MARZO DE 2025 </b>
+			</p>
+    
+	
+			<p style="color:blUe; font-size:18px;font-weight:bold;">
+                        <b> CUARTO AÑO Y TERCER AÑO  desde 9hs de SASBADO 28 Y hasta las 9hs del DOMINGO 29 DE MARZO DE 2025 </b>
+			</p>
+			 
+			<p style="color:green; font-size:18px;font-weight:bold;">
+                        <b> SEXTO AÑO Y QUINTO AÑO  </b>
+			<b> desde las 9hs del SABADO 29 de MARZO  Y hasta las 9hs del DOMINGO 30 MARZO DE 2025 </b>
+			
+			
+			 <p style="color:RED; font-size:16px;font-weight:bold;">
+			<b> INSCRIPCION A MATERIAS DE PRIMER CUATRIMESTRE Y ANUALES HABILITADA DESDE EL DOMINGO 30 DESDE 9HS DE MARZO  HASTA LUNES 31  DE MARZO DE 2025 --- TODAS  LAS ESPECIALIDADES </b>
+			 </p>
+			
+			<p style="color:RED; font-size:22px;font-weight:bold;">
+			
+			<div align="center"><font color="#FFFFFF" size="+1"><marquee bgcolor="#000000" direction="left" loop="20">NO INSISTIR EN MATERIAS DE LOS AÑOS NO HABILITADOS !!!GRACIAS!!!</marquee></font></div>
+			
+       			
+			</p>
+
+
+			<b></b>
+			
+			</p>
+			
+			-->	
+			
+			<br></p><hr>
+			<p style="color:black; font-size:14px;font-weight:bold; text-align:center">
+			<b>YA PODES DESCARGAR TU CERTIFICADO DE ALUMNO REGULAR y ACTIVIDAD ACADEMICA (Validación con código QR) desde el link: "Descarga de certificados</b>
+			
+			</p><p style="color:black; font-size:14px;font-weight:bold; text-align:center">
+			<b>Dirección de TIC´s</b>
+			
+			
+			<br></p><hr>
+			<p style="color:black; font-size:14px;font-weight:bold; text-align:center">
+			<b>ATENCION!!! Podes consultar sobre cuestiones académicas relacionadas con CURSADO y EXAMENES a través de los mails:</b>
+		
+			</p><p style="color:blue; font-size:14px;font-weight:bold;">
+			<b>dptoalumnos@frt.utn.edu.ar </b>
+			
+			</p><p style="color:blue; font-size:14px;font-weight:bold;">
+			<b>legajosyactas@frt.utn.edu.ar </b>
+
+			<!--<p style="color:black; font-size:14px;font-weight:bold; text-align:center">
+			<b>o chatear online (de 14:30 a 18:30hs.) utilizando TEAMS CHAT desde tu cuenta de correo institucional</b>
+          		
+            <br/><hr/>
+
+				
+			<!--<p style="color:black; font-size:13px;font-weight:bold; text-align:center"><b>Para registrarte como usuario del Campus Virtual de la UTN-FRT,
+			solicitá la creación de una cuenta enviando los siguientes datos a:</b></p>
+			<p style="color:green; font-size:14px;font-weight:bold; text-align:center">campusvirtual@frt.utn.edu.ar</p>
+			<p style="color:black; font-size:13px;font-weight:bold; text-align:left">1. Apellido y Nombre completo</p>   
+			<p style="color:black; font-size:13px;font-weight:bold; text-align:left">2. Nro. de legajo </p>
+			<p style="color:black; font-size:13px;font-weight:bold; text-align:left">3. Nro. de DNI </p>
+			<p style="color:black; font-size:13px;font-weight:bold; text-align:left">4. Localidad y país de origen </p>
+			<p style="color:black; font-size:13px;font-weight:bold; text-align:left">5. Materia y Carrera </p> 
+			
+			<p style="color:red; font-size:12px;font-weight:bold; text-align:justify">
+			En caso de no poder ingresar a tu cuenta envia un email al mismo correo específicando el inconveniente. (Nota: esta cuenta no es igual a una cuenta institucional)</p> --> 
+			
+			</p><hr>
+			
+			<!--	
+			<p style="color:red; font-size:12px;font-weight:bold; text-align:justify">
+			<b>Si no pudiste inscribirte a cursado, cualquiera sea el motivo (falta de cupo, requisito académico, etc.), y sabes que reglamentariamente estas habilitado para asistir a clases  no te preocupes; podrás cursar la materia a través del <a href="http://frt.cvg.utn.edu.ar">Campus Virtual</a></b>
+			</p>
+			-->	
+		   	
+			<b>(Ciclo Lectivo 2026)</b>
+			<hr>
+
+            </div>
+			<div>
+			<!--Si tiene problemas con su contraseña, remítase al <b>Dpto. de Alumnos.</b>
+			GRACIAS.<br/>-->
+						
+			<p style="color:black; font-size:12px;font-weight:bold;">
+			
+			<b>PARA RESETEAR CONTRASEÑA Sysacad Web mandar mail REMITIENDO NOMBRE, LEGAJO y/o DNI a: </b>
+			</p>
+			<p style="color:black; font-size:12px;font-weight:bold;">
+			<b>dptoalumnos@frt.utn.edu.ar </b>
+			
+			</p>
+			
+	
+		</div>		
+	</div>
+	</center>
+<p></p>
+
+
+<div align="center">
+<font face="verdana" size="3">
+<a href="javascript:this.parent.print();">En caso de error, imprimir esta pantalla</a></font></div>
+
+<iframe src="http://sysacad.frt.utn.edu.ar/local/pie.asp" width="100%" height="100" frameborder="0"></frame>
+
+</body>
+</html>
+</iframe></body></html>
